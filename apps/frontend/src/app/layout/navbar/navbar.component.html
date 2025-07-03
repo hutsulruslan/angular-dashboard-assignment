@@ -1,0 +1,26 @@
+<div class="relative mx-128 my-12 flex items-center gap-6">
+  <nav
+    #scrollContainer
+    class="flex gap-12 overflow-x-auto no-scrollbar scroll-smooth flex-1"
+  >
+    <app-navbar-item
+      *ngFor="let item of navItems"
+      [label]="item.label"
+      [icon]="item.icon"
+      [isActive]="item.isActive"
+      [route]="item.route"
+    ></app-navbar-item>
+  </nav>
+
+  <!-- Кнопки прокрутки (завжди видимі) -->
+  <div class="flex gap-4 z-10 -ml-4">
+    <app-navbar-scroll-btn
+      direction="left"
+      [onClick]="scrollLeft.bind(this)"
+    ></app-navbar-scroll-btn>
+    <app-navbar-scroll-btn
+      direction="right"
+      [onClick]="scrollRight.bind(this)"
+    ></app-navbar-scroll-btn>
+  </div>
+</div>

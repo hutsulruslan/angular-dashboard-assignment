@@ -1,0 +1,46 @@
+<div
+  class="border-2 rounded-xl border-componentBorderColor bg-componentBg shadow-md p-24 text-white"
+>
+  <!-- Table -->
+  <div class="overflow-x-auto">
+    <!-- Wrapper -->
+    <div class="rounded-12 bg-componentBg shadow-md text-white">
+      <h2 class="text-20 font-semibold mb-24">Work Queue</h2>
+
+      <!-- Tabs -->
+      <div class="flex gap-8 mb-24">
+        <button
+          *ngFor="let tab of tabs"
+          (click)="setActiveTab(tab)"
+          [ngClass]="{
+        'bg-lightBlue text-white': activeTab === tab,
+        'bg-dark text-white/70': activeTab !== tab
+      }"
+          class="px-16 py-8 rounded-full text-14 font-medium"
+        >
+          {{ tab }} ({{ getTabCount(tab) }})
+        </button>
+      </div>
+
+      <!-- Grid Headings -->
+      <div
+        class="grid grid-cols-[1.5fr_2fr_1.5fr_1.2fr_1fr_40px] text-12 text-white/40 uppercase px-16 py-12 border-b border-white/10"
+      >
+        <div>Originator</div>
+        <div>Client/Line</div>
+        <div>Type</div>
+        <div>Status</div>
+        <div>Created</div>
+        <div></div>
+      </div>
+
+      <!-- Items -->
+      <div class="grid grid-cols-1 divide-y divide-white/10">
+        <app-work-queue-item
+          *ngFor="let item of filteredItems()"
+          [item]="item"
+        ></app-work-queue-item>
+      </div>
+    </div>
+  </div>
+</div>

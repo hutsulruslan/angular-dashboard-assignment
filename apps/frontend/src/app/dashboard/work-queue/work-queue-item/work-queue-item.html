@@ -1,0 +1,42 @@
+<div
+  class="grid grid-cols-[1.5fr_2fr_1.5fr_1.2fr_1fr_40px] items-center py-12 px-16 gap-8 hover:bg-white/5 transition-colors duration-150"
+>
+  <!-- Originator -->
+  <div class="flex items-center gap-12">
+    <div
+      class="bg-white/10 text-white rounded-full w-32 h-32 flex items-center justify-center text-14 font-bold uppercase"
+    >
+      {{ item.originator.initials }}
+    </div>
+    <div class="text-14">{{ item.originator.name }}</div>
+  </div>
+
+  <!-- Client/Line -->
+  <div>
+    <div class="text-14">{{ item.clientName }}</div>
+    <div class="text-12 text-white/50">{{ item.clientLine }}</div>
+  </div>
+
+  <!-- Type -->
+  <div class="text-14">{{ item.type }}</div>
+
+  <!-- Status -->
+  <div>
+    <app-status-indicator [status]="item.status" />
+  </div>
+
+  <!-- Created -->
+  <div class="text-14">{{ item.created }}</div>
+
+  <!-- Actions -->
+  <div class="text-right">
+    <button
+      class="w-32 h-32 rounded-full border border-white/30 flex items-center justify-center text-white/40 hover:text-white hover:border-white transition-colors duration-150"
+    >
+      <fa-icon
+        class="text-[1.6rem]"
+        [icon]="['fas', 'ellipsis-vertical']"
+      ></fa-icon>
+    </button>
+  </div>
+</div>
