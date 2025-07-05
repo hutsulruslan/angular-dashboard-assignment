@@ -2,10 +2,12 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { WorkQueueItemModel } from './models/work-queue-item.model';
 import { WorkQueueItem } from './work-queue-item/work-queue-item';
+import { UiCard } from '../../shared/ui/ui-card/ui-card';
+import { DataTable } from '../../shared/ui/data-table/data-table';
 
 @Component({
   selector: 'app-work-queue',
-  imports: [CommonModule, WorkQueueItem],
+  imports: [CommonModule, WorkQueueItem, UiCard, DataTable],
   templateUrl: './work-queue.html',
   styleUrl: './work-queue.scss',
 })

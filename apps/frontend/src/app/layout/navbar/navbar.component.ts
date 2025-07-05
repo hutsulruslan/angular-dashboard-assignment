@@ -1,4 +1,10 @@
-import { Component, ViewChild, ElementRef } from '@angular/core';
+import {
+  Component,
+  ViewChild,
+  ElementRef,
+  AfterViewInit,
+  HostListener,
+} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NavbarItemComponent } from './navbar-item/navbar-item.component';
 import { NavItem } from './models/nav-item.model';
@@ -10,8 +16,10 @@ import { NavbarScrollBtn } from './navbar-scroll-btn/navbar-scroll-btn';
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss',
 })
-export class NavbarComponent {
+export class NavbarComponent implements AfterViewInit {
   @ViewChild('scrollContainer') scrollContainer!: ElementRef<HTMLDivElement>;
+
+  showScrollButtons = false;
 
   navItems: NavItem[] = [
     {
@@ -100,5 +108,19 @@ export class NavbarComponent {
       left: 150,
       behavior: 'smooth',
     });
+  }
+
+  ngAfterViewInit() {
+    this.updateScrollButtonsVisibility();
+  }
+
+  updateScrollButtonsVisibility() {
+    const el = this.scrollContainer.nativeElement;
+    this.showScrollButtons = el.scrollWidth > el.clientWidth;
+  }
+
+  @HostListener('window:resize')
+  onResize() {
+    this.updateScrollButtonsVisibility();
   }
 }

@@ -1,0 +1,70 @@
+<div
+  class="grid grid-cols-[2fr_1.5fr_1.5fr_1.5fr_1.5fr_1.2fr_1fr_1.5fr_1.5fr_1fr_1.8fr_40px] items-center py-12 px-16 gap-8 hover:bg-white/5 transition-colors duration-150 text-14"
+>
+  <!-- Account name + type -->
+  <div>
+    <div class="font-medium">{{ item.name }}</div>
+    <div class="text-12 text-white/40">{{ item.type }}</div>
+  </div>
+
+  <div>{{ item.line }}</div>
+  <div>{{ item.broker }}</div>
+  <div>{{ item.renewalDate }}</div>
+  <div class="text-lightBlue font-semibold">{{ item.premium }}</div>
+  <div>{{ item.ratedPremium }}</div>
+
+  <!-- Loss Ratio -->
+  <div>
+    <app-badge
+      [text]="item.lossRatio + '%'"
+      [background]="getLossRatioColor(item.lossRatio).bg"
+      [textColor]="getLossRatioColor(item.lossRatio).text"
+      class="min-w-24"
+    ></app-badge>
+  </div>
+
+  <!-- Appetite -->
+  <div>
+    <app-badge
+      [text]="item.appetite"
+      class="text-center justify-center min-w-64"
+    ></app-badge>
+  </div>
+
+  <!-- Status -->
+  <div>
+    <app-status-indicator [text]="item.status" class="text-14" />
+  </div>
+
+  <div>{{ item.triage }}</div>
+
+  <!-- Winnability -->
+  <div>
+    <div
+      class="inline-flex items-center px-3 gap-[4.5px] rounded-full border border-lightBlue"
+    >
+      <div class="flex gap-1">
+        <ng-container
+          *ngFor="let dot of [].constructor(item.winnability.value)"
+        >
+          <div class="w-3.5 h-3.5 rounded-full bg-lightBlue"></div>
+        </ng-container>
+      </div>
+      <span class="text-12 text-lightBlue font-medium"
+        >{{ item.winnability.label }}</span
+      >
+    </div>
+  </div>
+
+  <!-- Actions -->
+  <div class="text-right">
+    <button
+      class="w-32 h-32 rounded-full border border-white/30 flex items-center justify-center text-white/40 hover:text-white hover:border-white transition-colors duration-150"
+    >
+      <fa-icon
+        class="text-[1.6rem]"
+        [icon]="['fas', 'ellipsis-vertical']"
+      ></fa-icon>
+    </button>
+  </div>
+</div>

@@ -1,0 +1,35 @@
+:host {
+  @apply block h-full;
+}
+
+.portfolio-goals {
+  @apply h-full;
+
+  .bg-success {
+    background-color: #1ac888;
+  }
+
+  .bg-warning {
+    background-color: #facc15;
+  }
+
+  .bg-error {
+    background-color: #ef4444;
+  }
+
+  .bg-dark {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .text-success {
+    color: #1ac888;
+  }
+
+  .text-lightBlue {
+    color: #3b82f6;
+  }
+
+  .rounded-4 {
+    border-radius: 4px;
+  }
+}

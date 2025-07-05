@@ -1,0 +1,7 @@
+.btn-outline {
+  @apply border border-lightBlue rounded-full px-12 text-lightBlue text-14 hover:bg-white/10 transition;
+}
+
+.btn-primary {
+  @apply bg-blue-500 text-white font-semibold rounded-full px-14 text-14 hover:bg-blue-600 transition;
+}

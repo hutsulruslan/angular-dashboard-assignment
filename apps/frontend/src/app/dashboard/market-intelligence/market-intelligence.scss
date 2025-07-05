@@ -1,0 +1,31 @@
+.title {
+  @apply text-18 font-semibold mb-16;
+}
+
+.intel-list {
+  @apply flex flex-col gap-12;
+}
+
+.intel-item {
+  @apply flex items-start gap-10 text-14;
+}
+
+.message {
+  @apply text-white;
+}
+
+.dot {
+  @apply w-10 h-10 rounded-full mt-4 flex-shrink-0;
+
+  &.dot-red {
+    @apply bg-red-500;
+  }
+
+  &.dot-yellow {
+    @apply bg-yellow-400;
+  }
+
+  &.dot-blue {
+    @apply bg-blue-500;
+  }
+}

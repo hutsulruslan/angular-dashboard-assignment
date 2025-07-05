@@ -1,0 +1,11 @@
+.title {
+  @apply text-18 font-semibold mb-16;
+}
+
+.actions {
+  @apply flex flex-col gap-12;
+}
+
+.action-button {
+  @apply bg-lightBlue text-white rounded-full text-14 font-medium py-8 transition-colors duration-200 hover:bg-lightBlue/80;
+}

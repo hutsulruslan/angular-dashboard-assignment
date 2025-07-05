@@ -1,0 +1,10 @@
+<span class="inline-flex items-center gap-8" [ngClass]="class">
+  <span
+    [ngClass]="[
+      sizeClass,
+      type === 'dot' ? 'rounded-full' : 'rounded-md px-8 py-2 text-white',
+      color
+    ]"
+  ></span>
+  <ng-container *ngIf="showText">{{ text }}</ng-container>
+</span>

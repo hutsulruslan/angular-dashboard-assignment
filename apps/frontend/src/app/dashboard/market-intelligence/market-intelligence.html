@@ -1,0 +1,10 @@
+<app-ui-card>
+  <h2 class="title">Market intelligence</h2>
+
+  <div class="intel-list">
+    <div class="intel-item" *ngFor="let item of intelligence">
+      <div class="dot" [ngClass]="item.color"></div>
+      <p class="message">{{ item.message }}</p>
+    </div>
+  </div>
+</app-ui-card>

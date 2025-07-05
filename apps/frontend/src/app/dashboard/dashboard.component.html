@@ -1,3 +1,16 @@
-<div class="mx-128">
-  <app-work-queue></app-work-queue>
+<div class="mx-128 mb-[10rem]">
+  <div class="dashboard-grid">
+    <!-- Колонка 1: Work Queue -->
+    <app-work-queue class="h-full"></app-work-queue>
+
+    <!-- Колонка 2: Portfolio Goals -->
+    <app-portfolio-goals class="h-full"></app-portfolio-goals>
+
+    <!-- Колонка 3: Quick Actions + Market Intelligence -->
+    <div class="flex flex-col h-full min-h-0 gap-12">
+      <app-quick-actions class="flex-shrink-0"></app-quick-actions>
+      <app-market-intelligence class="flex-1 min-h-0"></app-market-intelligence>
+    </div>
+  </div>
+  <app-accounts></app-accounts>
 </div>

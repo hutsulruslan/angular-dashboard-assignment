@@ -1,0 +1,48 @@
+<app-ui-card>
+  <app-data-table
+    title="My accounts"
+    [gridTemplateColumns]="'2fr 1.5fr 1.5fr 1.5fr 1.5fr 1.2fr 1fr 1.5fr 1.5fr 1fr 1.8fr 40px'"
+  >
+    <!-- Панель дій -->
+    <ng-container table-actions>
+      <div class="flex items-center gap-8 flex-wrap">
+        <!-- Пошук -->
+        <div class="relative">
+          <input
+            type="text"
+            placeholder="Search"
+            class="bg-darkGrey rounded-full px-12 text-white text-14 w-[180px] placeholder-white/40"
+          />
+        </div>
+
+        <!-- Кнопки -->
+        <button class="btn-outline">Filter</button>
+        <button class="btn-outline">Sort</button>
+        <button class="btn-outline">Group</button>
+        <button class="btn-primary">+ New</button>
+      </div>
+    </ng-container>
+
+    <!-- Заголовки -->
+    <ng-container table-headings class="items-center">
+      <div>Account Name/Type</div>
+      <div>Line</div>
+      <div>Broker</div>
+      <div>Renewal Date</div>
+      <div>Premium</div>
+      <div>Rated Premium</div>
+      <div>Loss Ratio</div>
+      <div>Appetite</div>
+      <div>Status</div>
+      <div>Triage</div>
+      <div>Winnability</div>
+      <div></div>
+    </ng-container>
+
+    <!-- Дані -->
+    <app-account-row
+      *ngFor="let item of accounts"
+      [item]="item"
+    ></app-account-row>
+  </app-data-table>
+</app-ui-card>
