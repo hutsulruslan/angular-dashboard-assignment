@@ -1,5 +1,6 @@
 import { Route } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { AccountsGeneral } from './accounts-general/accounts-general';
 
 export const appRoutes: Route[] = [
   {
@@ -10,5 +11,9 @@ export const appRoutes: Route[] = [
   {
     path: 'dashboard',
     component: DashboardComponent,
+  },
+  {
+    path: 'accounts-general',
+    component: AccountsGeneral,
   },
 ];

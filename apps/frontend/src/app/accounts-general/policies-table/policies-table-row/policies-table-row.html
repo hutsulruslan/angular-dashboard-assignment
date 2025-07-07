@@ -1,0 +1,59 @@
+<div
+  class="grid items-center px-16 py-12 text-14 gap-8 hover:bg-white/5 transition"
+  [style.gridTemplateColumns]="gridTemplateColumns"
+>
+  <div>
+    <div class="flex items-center gap-4 font-medium text-white">
+      <fa-icon
+        [icon]="['fas', getIconName(item.name)]"
+        [ngClass]="getIconColor(item.name)"
+      ></fa-icon>
+      {{ item.name }}
+    </div>
+    <div class="text-12 text-white/40">{{ item.id }}</div>
+  </div>
+  <div>{{ item.effDate }}</div>
+  <div>{{ item.expDate }}</div>
+  <div>
+    <span
+      [ngClass]="{ 'text-green-400': item.status === 'Active', 'text-yellow-400': item.status === 'Pending' }"
+      >●</span
+    >
+    {{ item.status }}
+  </div>
+  <div>{{ item.expiringTech }}</div>
+  <div>{{ item.expiringPremium }}</div>
+  <div>{{ item.renewalToTech }}</div>
+  <div>{{ item.renewalTech }}</div>
+  <div class="font-semibold">{{ item.renewalPremium }}</div>
+  <div
+    [ngClass]="{
+        'text-green-400': item.rateChange.startsWith('3'),
+        'text-red-500': item.rateChange.startsWith('6') || item.rateChange.startsWith('10')
+      }"
+  >
+    {{ item.rateChange }}
+  </div>
+  <div>
+    <ng-container *ngIf="item.lossRatio !== 'N/A'; else notAvailable">
+      <app-badge
+        [text]="item.lossRatio"
+        [background]="getLossRatioColor(item.lossRatio).bg"
+        [textColor]="getLossRatioColor(item.lossRatio).text"
+      ></app-badge>
+    </ng-container>
+    <ng-template #notAvailable>
+      <span>N/A</span>
+    </ng-template>
+  </div>
+  <div>
+    <button
+      class="w-32 h-32 rounded-full border border-white/30 flex items-center justify-center text-white/40 hover:text-white hover:border-white"
+    >
+      <fa-icon
+        [icon]="['fas', 'ellipsis-vertical']"
+        class="text-[1.6rem]"
+      ></fa-icon>
+    </button>
+  </div>
+</div>

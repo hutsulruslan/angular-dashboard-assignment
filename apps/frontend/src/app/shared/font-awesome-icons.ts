@@ -10,6 +10,16 @@ import {
   faArrowRight,
   faArrowLeft,
   faEllipsisVertical,
+  faCircleExclamation,
+  faShip,
+  faShieldHalved,
+  faUserShield,
+  faUmbrella,
+  faCircleCheck,
+  faCircleUp,
+  faCircleDown,
+  faRocket,
+  faPaperclip,
 } from '@fortawesome/free-solid-svg-icons';
 
 export const fontAwesomeIcons: IconDefinition[] = [
@@ -23,4 +33,14 @@ export const fontAwesomeIcons: IconDefinition[] = [
   faArrowRight,
   faArrowLeft,
   faEllipsisVertical,
+  faCircleExclamation,
+  faShip,
+  faShieldHalved,
+  faUserShield,
+  faUmbrella,
+  faCircleCheck,
+  faCircleUp,
+  faCircleDown,
+  faRocket,
+  faPaperclip,
 ];

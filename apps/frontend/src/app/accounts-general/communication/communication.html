@@ -1,0 +1,114 @@
+<div>
+  <h2 class="text-24 mb-6">Communication</h2>
+
+  <app-ui-card>
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+      <!-- Left side cards -->
+      <div class="flex flex-col gap-6">
+        <!-- Card 1 -->
+        <app-ui-card
+          [overrideClass]="'!bg-lightGrey !p-16 !border-blue-500 !rounded-[3rem] text-white font-thin w-full'"
+        >
+          <div class="flex items-center gap-4 mb-2">
+            <span class="bg-[#1E40AF] text-12 px-3 py-1 rounded-full">NEW</span>
+            <h3 class="text-18 m-0">Policy Renewal - Auto Insurance 5/15/25</h3>
+          </div>
+          <p class="text-14 text-white/60 mb-2">Michael Roberts // Apr 5</p>
+          <p class="text-14 text-white mb-4">
+            Hello Arthur, I’m reaching out regarding the upcoming auto policy
+            renewal for Real Estate Group, LLC. The current policy expires on
+            6/30/2024. Would you like to review coverage options before
+            proceeding with the renewal? I’ve attached the current policy
+            details and premium breakdown for your reference.
+          </p>
+          <div class="flex flex-col gap-4 items-start">
+            <span
+              class="bg-[rgba(59,185,121,0.4)] text-14 px-16 py-1 rounded-full text-white"
+              ><fa-icon [icon]="['fas', 'paperclip']"></fa-icon> 3
+              attachments</span
+            >
+            <button class="bg-blue-500 text-14 px-16 py-4 rounded-full">
+              Reply
+            </button>
+          </div>
+        </app-ui-card>
+
+        <!-- Card 2 -->
+        <app-ui-card
+          [overrideClass]="'!bg-lightGrey !p-16 !border-blue-500 !rounded-[3rem] text-white font-thin w-full'"
+        >
+          <div class="flex items-center gap-4 mb-2">
+            <span class="bg-[#1E40AF] text-12 px-3 py-1 rounded-full">NEW</span>
+            <h3 class="text-18 m-0">
+              New Quote Request – Workers Comp Insurance
+            </h3>
+          </div>
+          <p class="text-14 text-white/60 mb-2">Sarah Chen // Apr 5</p>
+          <p class="text-14 text-white mb-4">
+            Hi Arthur, Real Estate Group has expressed interest in adding
+            workers compensation coverage to their insurance portfolio. I’ve
+            completed the initial risk assessment based...
+          </p>
+          <div class="flex flex-col gap-4 items-start">
+            <span
+              class="bg-[rgba(59,185,121,0.4)] text-14 px-16 py-1 rounded-full text-white"
+              ><fa-icon [icon]="['fas', 'paperclip']"></fa-icon> 3
+              attachments</span
+            >
+            <button class="bg-blue-500 text-14 px-16 py-4 rounded-full">
+              Reply
+            </button>
+          </div>
+        </app-ui-card>
+      </div>
+
+      <!-- Right side cards -->
+      <div class="flex flex-col gap-6">
+        <!-- Card 3 -->
+        <app-ui-card
+          [overrideClass]="'!bg-lightGrey !p-16 !rounded-[3rem] text-white font-thin w-full'"
+        >
+          <div class="flex items-center gap-4 mb-2">
+            <span class="bg-[#1E40AF] text-12 px-3 py-1 rounded-full"
+              >Responded</span
+            >
+            <h3 class="text-18 m-0">
+              Fwd: New Submission – BPM Real Estate – EFF 4/1/24
+            </h3>
+          </div>
+          <p class="text-14 text-white/60 mb-2">Joshua Dunmire // Mar 25</p>
+          <p class="text-14 text-white mb-4">
+            Arthur, attached please find our submission for the above mentioned
+            applicant. We have...
+          </p>
+        </app-ui-card>
+
+        <!-- Card 4 -->
+        <app-ui-card
+          [overrideClass]="'!bg-lightGrey !p-16 !rounded-[3rem] text-white font-thin w-full'"
+        >
+          <div class="flex items-center gap-4 mb-2">
+            <h3 class="text-18 m-0">
+              New Business: BPM Real Estate Group, LLC
+            </h3>
+          </div>
+          <p class="text-14 text-white/60 mb-2">Isabel Kreller // Feb 28</p>
+          <p class="text-14 text-white mb-4">
+            Hello Arthur, I am pleased to present you with a submission on this
+            client’s upcoming...
+          </p>
+          <div class="flex flex-col gap-4 items-start">
+            <span
+              class="bg-[rgba(59,185,121,0.4)] text-14 px-16 py-1 rounded-full text-white"
+              ><fa-icon [icon]="['fas', 'paperclip']"></fa-icon> 3
+              attachments</span
+            >
+            <button class="bg-blue-500 text-14 px-16 py-4 rounded-full">
+              Reply
+            </button>
+          </div>
+        </app-ui-card>
+      </div>
+    </div>
+  </app-ui-card>
+</div>

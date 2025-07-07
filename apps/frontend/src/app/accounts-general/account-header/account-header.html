@@ -1,0 +1,6 @@
+<div
+  class="flex flex-col md:flex-row justify-between items-start gap-6 bg-base rounded-2xl mx-128 mt-10 mb-6"
+>
+  <app-account-header-info *ngIf="info" [info]="info"></app-account-header-info>
+  <app-account-header-alert [alerts]="alerts" />
+</div>

@@ -1,0 +1,71 @@
+<div>
+  <h2 class="text-24 mb-6">Policies</h2>
+  <app-ui-card>
+    <app-data-table
+      [gridTemplateColumns]="'2fr 1.2fr 1.2fr 1fr 1.5fr 1.5fr 1.5fr 1.5fr 1.5fr 1fr 1fr 40px'"
+    >
+      <ng-container table-actions>
+        <div class="flex items-center gap-4">
+          <input
+            type="text"
+            placeholder="Search"
+            class="bg-darkGrey rounded-full px-12 text-white text-14 w-[180px] placeholder-white/40"
+          />
+          <button class="btn-outline">Filter</button>
+          <button class="btn-outline">Group</button>
+        </div>
+      </ng-container>
+
+      <ng-container table-headings>
+        <div>Line</div>
+        <div>Eff. Date</div>
+        <div>Exp. Date</div>
+        <div>Status</div>
+        <div>Expiring Tech</div>
+        <div>Expiring Premium</div>
+        <div>Renewal To Tech</div>
+        <div>Renewal Tech</div>
+        <div>Renewal Premium</div>
+        <div>Rate Change</div>
+        <div>Loss Ratio</div>
+        <div></div>
+      </ng-container>
+
+      <app-policies-table-row
+        *ngFor="let item of policies"
+        [item]="item"
+        [gridTemplateColumns]="'2fr 1.2fr 1.2fr 1fr 1.5fr 1.5fr 1.5fr 1.5fr 1.5fr 1fr 1fr 40px'"
+      />
+
+      <div
+        class="grid items-center font-semibold px-16 py-12 text-14 text-white/80 border-t border-white/10"
+        style="
+          grid-template-columns: 2fr 1.2fr 1.2fr 1fr 1.5fr 1.5fr 1.5fr 1.5fr 1.5fr 1fr 1fr 40px;
+        "
+      >
+        <div></div>
+        <!-- Line -->
+        <div></div>
+        <!-- Eff. Date -->
+        <div></div>
+        <!-- Exp. Date -->
+        <div class="uppercase">Total ({{ policies.length }})</div>
+        <!-- ✅ Status -->
+        <div>{{ getTotal('expiringTech') | currency:'USD' }}</div>
+        <div>{{ getTotal('expiringPremium') | currency:'USD' }}</div>
+        <div>{{ getTotal('renewalToTech') | currency:'USD' }}</div>
+        <div>{{ getTotal('renewalTech') | currency:'USD' }}</div>
+        <div>{{ getTotal('renewalPremium') | currency:'USD' }}</div>
+        <div>{{ getAverageRateChange() }}%</div>
+        <div>
+          <app-badge
+            [text]="getAverageLossRatio() + '%'"
+            [background]="getLossRatioColor(getAverageLossRatio()).bg"
+            [textColor]="getLossRatioColor(getAverageLossRatio()).text"
+          ></app-badge>
+        </div>
+        <div></div>
+      </div>
+    </app-data-table>
+  </app-ui-card>
+</div>

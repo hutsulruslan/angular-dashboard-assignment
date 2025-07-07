@@ -1,0 +1,24 @@
+<div>
+  <h2 class="text-24 mb-12">Account Details</h2>
+  <app-ui-card [overrideClass]="'!p-18 !rounded-[1.2rem] text-white w-full'">
+    <div class="flex flex-col lg:flex-row gap-6">
+      <!-- LEFT SIDEBAR -->
+      <aside class="w-full lg:w-[20rem]">
+        <app-sidebar></app-sidebar>
+      </aside>
+
+      <!-- MAIN CONTENT -->
+      <section class="flex-1 flex flex-col gap-6">
+        <h3 class="text-44">Winnability</h3>
+        <app-winnability-overview></app-winnability-overview>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <app-winnability-increase></app-winnability-increase>
+          <app-winnability-decrease></app-winnability-decrease>
+        </div>
+
+        <app-winnability-recommendations></app-winnability-recommendations>
+      </section>
+    </div>
+  </app-ui-card>
+</div>

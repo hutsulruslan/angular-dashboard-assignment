@@ -1,0 +1,48 @@
+<app-ui-card
+  [overrideClass]="'!bg-lightGrey !p-16 !rounded-[3rem] text-white w-full'"
+>
+  <p
+    class="text-20 font-thin mb-16 flex items-center gap-8 text-green-500 tracking-wider"
+  >
+    <fa-icon [icon]="['fas', 'rocket']"></fa-icon>
+    AI-Powered Recommendations
+  </p>
+
+  <!-- Recommendation 1 -->
+  <div class="flex justify-between items-start mb-16 gap-8">
+    <div class="max-w-[75%]">
+      <p class="text-18 font-thin text-white mb-4">
+        Offer 5% premium discount in exchange for 3-year commitment
+      </p>
+      <p class="text-16 text-white/60 leading-snug">
+        Historical win rate increases 24% with multi-year commitments. Current
+        pricing is 12% above market average. This approach would strengthen
+        retention while maintaining adequate profitability.
+      </p>
+    </div>
+    <button
+      class="bg-green-500 text-dark text-14 px-20 py-6 rounded-full font-medium whitespace-nowrap hover:opacity-90 transition"
+    >
+      Apply
+    </button>
+  </div>
+
+  <!-- Recommendation 2 -->
+  <div class="flex justify-between items-start gap-8">
+    <div class="max-w-[75%]">
+      <p class="text-18 font-thin text-white mb-4">
+        Propose risk control services for cargo handling procedures
+      </p>
+      <p class="text-16 text-white/60 leading-snug">
+        Can potentially reduce loss ratio by 15–20% based on similar maritime
+        accounts in your portfolio. Specific focus on loading/unloading
+        operations would address the most frequent claim scenarios.
+      </p>
+    </div>
+    <button
+      class="bg-green-500 text-dark text-14 px-20 py-6 rounded-full font-medium whitespace-nowrap hover:opacity-90 transition"
+    >
+      Apply
+    </button>
+  </div>
+</app-ui-card>

@@ -8,5 +8,5 @@ import { CommonModule } from '@angular/common';
   styleUrl: './ui-card.scss',
 })
 export class UiCard {
-  @Input() class = '';
+  @Input() overrideClass: string | string[] = '';
 }

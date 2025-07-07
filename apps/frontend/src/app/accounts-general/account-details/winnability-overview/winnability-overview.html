@@ -1,0 +1,92 @@
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+  <app-ui-card
+    [overrideClass]="'!bg-lightGrey !p-16 !rounded-[3rem] w-full text-white'"
+  >
+    <div class="flex flex-col">
+      <div>
+        <span class="text-18 font-thin">Overall Score</span>
+
+        <div class="flex items-center gap-4 mt-2">
+          <p class="text-44 font-sans font-thin m-0">82%</p>
+
+          <div
+            class="flex gap-1 items-center border-blue-500 border-2 px-6 py-1 rounded-full"
+          >
+            <div class="w-8 h-8 bg-blue-500 rounded-full"></div>
+            <div class="w-8 h-8 bg-blue-500 rounded-full"></div>
+            <div class="w-8 h-8 bg-blue-500 rounded-full"></div>
+            <div class="w-8 h-8 bg-blue-500 rounded-full"></div>
+            <span class="text-14 text-blue-500 ml-2">Very Strong</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </app-ui-card>
+  <app-ui-card
+    [overrideClass]="'!bg-lightGrey !p-16 !rounded-[3rem] w-full text-white'"
+  >
+    <div class="flex flex-col justify-between h-full">
+      <!-- Заголовок -->
+      <span class="text-18 font-thin">Historical trend</span>
+
+      <!-- SVG графік -->
+      <div class="mt-4">
+        <svg
+          viewBox="0 0 200 50"
+          class="w-full h-16 text-blue-400"
+          preserveAspectRatio="none"
+        >
+          <polyline
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            points="0,40 20,30 40,32 60,28 80,35 100,25 120,28 140,28 160,26 180,22 200,25"
+          />
+        </svg>
+
+        <!-- Місяці -->
+        <div class="flex justify-between text-gray-500 text-12 mt-1">
+          <span>Jan</span>
+          <span>Feb</span>
+          <span>Mar</span>
+          <span>Apr</span>
+          <span>Now</span>
+        </div>
+      </div>
+    </div>
+  </app-ui-card>
+  <app-ui-card
+    [overrideClass]="'!bg-lightGrey !p-16 !rounded-[3rem] w-full text-white'"
+  >
+    <div class="flex flex-col gap-4">
+      <span class="text-18 font-thin">Position</span>
+
+      <div class="flex items-center justify-between gap-4">
+        <div class="w-[70%] bg-[#1C1E2A] h-6 rounded-full overflow-hidden">
+          <div class="bg-blue-500 h-full rounded-full" style="width: 82%"></div>
+        </div>
+        <div class="text-14 text-gray-300 whitespace-nowrap">
+          Your score: 82%
+        </div>
+      </div>
+
+      <div class="flex items-center justify-between gap-4">
+        <div class="w-[70%] bg-[#1C1E2A] h-6 rounded-full overflow-hidden">
+          <div class="bg-blue-500 h-full rounded-full" style="width: 68%"></div>
+        </div>
+        <div class="text-14 text-gray-400 whitespace-nowrap">
+          Market Avg: 68%
+        </div>
+      </div>
+
+      <div class="flex items-center justify-between gap-4">
+        <div class="w-[70%] bg-[#1C1E2A] h-6 rounded-full overflow-hidden">
+          <div class="bg-blue-500 h-full rounded-full" style="width: 88%"></div>
+        </div>
+        <div class="text-14 text-gray-400 whitespace-nowrap">
+          Top competitor: 88%
+        </div>
+      </div>
+    </div>
+  </app-ui-card>
+</div>

@@ -1,0 +1,18 @@
+<app-ui-card
+  [overrideClass]="'!border-[#FDD261] !py-8 !px-16 !rounded-[1.6rem]'"
+>
+  <div class="flex items-center gap-4 text-[#FDD261] mb-3">
+    <fa-icon [icon]="['fas', 'circle-exclamation']" class="text-20"></fa-icon>
+    <h3 class="text-20 font-sans">Needs Attention</h3>
+  </div>
+
+  <div class="flex flex-col md:flex-row gap-20 text-14">
+    <div *ngFor="let alert of alerts" class="flex flex-col">
+      <div class="font-sans text-[#E5E7EB]">{{ alert.title }}</div>
+      <div class="text-gray-400 text-12">{{ alert.subtitle }}</div>
+      <a [href]="alert.linkUrl" class="text-blue-400 hover:underline mt-1">
+        {{ alert.linkText }} →
+      </a>
+    </div>
+  </div>
+</app-ui-card>

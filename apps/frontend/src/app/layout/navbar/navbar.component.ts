@@ -4,11 +4,16 @@ import {
   ElementRef,
   AfterViewInit,
   HostListener,
+  inject,
+  OnDestroy,
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NavbarItemComponent } from './navbar-item/navbar-item.component';
 import { NavItem } from './models/nav-item.model';
 import { NavbarScrollBtn } from './navbar-scroll-btn/navbar-scroll-btn';
+import { HttpClient } from '@angular/common/http';
+import { NavigationEnd, Router } from '@angular/router';
+import { filter, Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-navbar',
@@ -16,85 +21,48 @@ import { NavbarScrollBtn } from './navbar-scroll-btn/navbar-scroll-btn';
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss',
 })
-export class NavbarComponent implements AfterViewInit {
+export class NavbarComponent implements AfterViewInit, OnDestroy {
+  private http = inject(HttpClient);
+  private router = inject(Router);
+
   @ViewChild('scrollContainer') scrollContainer!: ElementRef<HTMLDivElement>;
 
+  navItems: NavItem[] = [];
   showScrollButtons = false;
 
-  navItems: NavItem[] = [
-    {
-      label: 'Dashboard',
-      icon: ['fas', 'house'],
-      route: '/dashboard',
-      isActive: true,
-    },
-    {
-      label: 'Accounts',
-      icon: ['fas', 'database'],
-      route: '/accounts',
-      isActive: false,
-    },
-    {
-      label: 'Brokers',
-      icon: ['fas', 'users'],
-      route: '/brokers',
-      isActive: false,
-    },
-    {
-      label: 'Submissions',
-      icon: ['fas', 'file-import'],
-      route: '/brokers',
-      isActive: false,
-    },
-    {
-      label: 'Organizations',
-      icon: ['fas', 'building'],
-      route: '/brokers',
-      isActive: false,
-    },
-    {
-      label: 'Goals & Rules',
-      icon: ['fas', 'bullseye'],
-      route: '/brokers',
-      isActive: false,
-    },
-    {
-      label: 'Admin',
-      icon: ['fas', 'key'],
-      route: '/brokers',
-      isActive: false,
-    },
-    {
-      label: 'Admin',
-      icon: ['fas', 'key'],
-      route: '/brokers',
-      isActive: false,
-    },
-    {
-      label: 'Admin',
-      icon: ['fas', 'key'],
-      route: '/brokers',
-      isActive: false,
-    },
-    {
-      label: 'Admin',
-      icon: ['fas', 'key'],
-      route: '/brokers',
-      isActive: false,
-    },
-    {
-      label: 'Admin',
-      icon: ['fas', 'key'],
-      route: '/brokers',
-      isActive: false,
-    },
-    {
-      label: 'Admin',
-      icon: ['fas', 'key'],
-      route: '/brokers',
-      isActive: false,
-    },
-  ];
+  private routeSub!: Subscription;
+
+  ngAfterViewInit() {
+    this.listenToRouteChanges();
+    this.updateScrollButtonsVisibility();
+  }
+
+  ngOnDestroy() {
+    this.routeSub?.unsubscribe();
+  }
+
+  listenToRouteChanges() {
+    this.routeSub = this.router.events
+      .pipe(filter((e): e is NavigationEnd => e instanceof NavigationEnd))
+      .subscribe(() => this.loadNavItems());
+  }
+
+  loadNavItems() {
+    const currentRoute = this.router.url;
+
+    const fileName = currentRoute.startsWith('/accounts')
+      ? 'nav-items-accounts.json'
+      : 'nav-items-dashboard.json';
+
+    this.http
+      .get<NavItem[]>(`mock/navigation/${fileName}`)
+      .subscribe((items) => {
+        this.navItems = items.map((item) => ({
+          ...item,
+          isActive: item.route === currentRoute,
+        }));
+      });
+  }
 
   scrollLeft() {
     this.scrollContainer.nativeElement.scrollBy({
@@ -108,10 +76,6 @@ export class NavbarComponent implements AfterViewInit {
       left: 150,
       behavior: 'smooth',
     });
-  }
-
-  ngAfterViewInit() {
-    this.updateScrollButtonsVisibility();
   }
 
   updateScrollButtonsVisibility() {

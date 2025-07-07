@@ -1,0 +1,37 @@
+[
+  {
+    "type": "Marine Cargo",
+    "icon": "ship",
+    "color": "#3B82F6",
+    "premium": 625000,
+    "effectiveDate": "2026-06-30"
+  },
+  {
+    "type": "General Liability",
+    "icon": "shield-alt",
+    "color": "#10B981",
+    "premium": 175000,
+    "effectiveDate": "2026-06-30"
+  },
+  {
+    "type": "Workers Comp",
+    "icon": "user-shield",
+    "color": "#8B5CF6",
+    "premium": 75000,
+    "effectiveDate": null
+  },
+  {
+    "type": "Property",
+    "icon": "building",
+    "color": "#FBBF24",
+    "premium": 64829.83,
+    "effectiveDate": null
+  },
+  {
+    "type": "Umbrella",
+    "icon": "umbrella",
+    "color": "#EF4444",
+    "premium": 275000,
+    "effectiveDate": "2026-03-13"
+  }
+]

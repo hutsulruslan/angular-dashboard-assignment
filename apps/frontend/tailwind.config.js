@@ -17,6 +17,9 @@ module.exports = {
         borderTopbBar: '#313B54',
         componentBg: '#1E2233',
         componentBorderColor: '#313B54',
+        lightGrey: '#252A3D',
+        darkBlue: '#252A38',
+        grey: '#8A8B98',
       },
       fontSize: {
         10: '1rem', // 10px

@@ -1,0 +1,74 @@
+[
+  {
+    "label": "Dashboard",
+    "icon": ["fas", "house"],
+    "route": "/dashboard",
+    "isActive": true
+  },
+  {
+    "label": "Accounts",
+    "icon": ["fas", "database"],
+    "route": "/accounts-general",
+    "isActive": false
+  },
+  {
+    "label": "Brokers",
+    "icon": ["fas", "users"],
+    "route": "",
+    "isActive": false
+  },
+  {
+    "label": "Submissions",
+    "icon": ["fas", "file-import"],
+    "route": "",
+    "isActive": false
+  },
+  {
+    "label": "Organizations",
+    "icon": ["fas", "building"],
+    "route": "",
+    "isActive": false
+  },
+  {
+    "label": "Goals & Rules",
+    "icon": ["fas", "bullseye"],
+    "route": "",
+    "isActive": false
+  },
+  {
+    "label": "Admin",
+    "icon": ["fas", "key"],
+    "route": "",
+    "isActive": false
+  },
+  {
+    "label": "Admin",
+    "icon": ["fas", "key"],
+    "route": "",
+    "isActive": false
+  },
+  {
+    "label": "Admin",
+    "icon": ["fas", "key"],
+    "route": "",
+    "isActive": false
+  },
+  {
+    "label": "Admin",
+    "icon": ["fas", "key"],
+    "route": "",
+    "isActive": false
+  },
+  {
+    "label": "Admin",
+    "icon": ["fas", "key"],
+    "route": "",
+    "isActive": false
+  },
+  {
+    "label": "Admin",
+    "icon": ["fas", "key"],
+    "route": "",
+    "isActive": false
+  }
+]

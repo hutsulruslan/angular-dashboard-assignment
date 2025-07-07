@@ -1,0 +1,78 @@
+<div>
+  <h2 class="text-24 mb-6">Account Status</h2>
+
+  <app-ui-card
+    [overrideClass]="'!p-18 !h-[12rem] !rounded-[1.2rem] text-white bg-[#0F111A] w-full'"
+  >
+    <div class="flex items-center justify-center w-full">
+      <!-- STEP 1 -->
+      <div class="flex flex-col items-center min-w-[6rem]">
+        <div class="text-green-400 text-[30px]">
+          <fa-icon [icon]="['fas', 'circle-check']"></fa-icon>
+        </div>
+        <span class="text-16 text-white mt-2">Submitted</span>
+      </div>
+
+      <!-- LINE -->
+      <div
+        class="w-[6rem] h-px border-t border-dashed border-green-400 mx-2"
+      ></div>
+
+      <!-- STEP 2 -->
+      <div class="flex flex-col items-center min-w-[6rem]">
+        <div class="text-green-400 text-[30px]">
+          <fa-icon [icon]="['fas', 'circle-check']"></fa-icon>
+        </div>
+        <span class="text-16 text-white mt-2">Review</span>
+      </div>
+
+      <div
+        class="w-[6rem] h-px border-t border-dashed border-green-400 mx-2"
+      ></div>
+
+      <!-- STEP 3 -->
+      <div class="flex flex-col items-center min-w-[6rem]">
+        <div class="text-green-400 text-[30px]">
+          <fa-icon [icon]="['fas', 'circle-check']"></fa-icon>
+        </div>
+        <span class="text-16 text-white mt-2">Quote</span>
+      </div>
+
+      <div
+        class="w-[6rem] h-px border-t border-dashed border-green-400 mx-2"
+      ></div>
+
+      <!-- STEP 4 -->
+      <div class="flex flex-col items-center min-w-[6rem]">
+        <div class="text-green-400 text-[30px]">
+          <fa-icon [icon]="['fas', 'circle-check']"></fa-icon>
+        </div>
+        <span class="text-16 text-white mt-2">Bind</span>
+      </div>
+
+      <div
+        class="w-[6rem] h-px border-t border-dashed border-green-400 mx-2"
+      ></div>
+
+      <!-- STEP 5 -->
+      <div class="flex flex-col items-center min-w-[6rem]">
+        <div class="text-green-400 text-[30px]">
+          <fa-icon [icon]="['fas', 'circle-check']"></fa-icon>
+        </div>
+        <span class="text-16 text-white mt-2">Issue</span>
+      </div>
+
+      <div
+        class="w-[6rem] h-px border-t border-dashed border-gray-500 mx-2"
+      ></div>
+
+      <!-- STEP 6 -->
+      <div class="flex flex-col items-center min-w-[6rem]">
+        <div class="text-gray-500 text-[30px]">
+          <fa-icon [icon]="['fas', 'circle-check']"></fa-icon>
+        </div>
+        <span class="text-16 text-white mt-2">Renew</span>
+      </div>
+    </div>
+  </app-ui-card>
+</div>

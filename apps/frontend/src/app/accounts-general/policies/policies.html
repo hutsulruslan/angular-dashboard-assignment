@@ -1,0 +1,28 @@
+<div class="mx-128 mb-32">
+  <h2 class="text-24 mb-6">Policies</h2>
+  <app-ui-card [overrideClass]="'!p-16 !rounded-[2rem] text-white'">
+    <div class="flex gap-12 flex-wrap justify-between">
+      <div
+        class="w-[22rem] p-12 rounded-[2rem] bg-lightGrey flex flex-col gap-2"
+        *ngFor="let policy of policies"
+      >
+        <div class="flex items-center gap-4">
+          <fa-icon
+            [icon]="['fas', policy.icon]"
+            class="text-20"
+            [ngStyle]="{ color: policy.color }"
+          ></fa-icon>
+          <span class="text-white text-20">{{ policy.type }}</span>
+        </div>
+        <div class="text-gray-400 text-16">
+          Premium:
+          <span>${{ policy.premium | number: '1.0-0' }}</span>
+        </div>
+        <div class="text-gray-400 text-16">
+          Eff.Date: {{ policy.effectiveDate ? (policy.effectiveDate | date:
+          'M/d/yyyy') : '---' }}
+        </div>
+      </div>
+    </div>
+  </app-ui-card>
+</div>
