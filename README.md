@@ -4,7 +4,7 @@
 
 ✨ Your new, shiny [Nx workspace](https://nx.dev) is ready ✨.
 
-[Learn more about this workspace setup and its capabilities](https://nx.dev/getting-started/tutorials/angular-monorepo-tutorial?utm_source=nx_project&amp;utm_medium=readme&amp;utm_campaign=nx_projects) or run `npx nx graph` to visually explore what was created. Now, let's get you up to speed!
+[Learn more about this workspace setup and its capabilities](https://nx.dev/getting-started/tutorials/angular-monorepo-tutorial?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) or run `npx nx graph` to visually explore what was created. Now, let's get you up to speed!
 
 ## Run tasks
 
@@ -85,16 +85,40 @@ Nx Console is an editor extension that enriches your developer experience. It le
 
 [Install Nx Console &raquo;](https://nx.dev/getting-started/editor-setup?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
 
+## Project Info
+
+### Technologies Used
+
+- **Nx** — Monorepo tool for managing and scaling Angular projects.
+- **Angular** — Main frontend framework.
+- **Tailwind CSS** — Utility-first CSS framework for rapid and modern UI development.
+- **FontAwesome** — Icon library for scalable vector icons.
+- **TypeScript** — Strongly typed JavaScript.
+- **SCSS** — For custom styles and advanced CSS features.
+
+### AI Tools Used
+
+- **ChatGPT (GPT-4)** — Used extensively for code generation, refactoring, explanations, and creating Angular/Tailwind component templates.
+- **AI visual tools** — Used for converting Figma or image-based designs to code (e.g., GPT Vision, Copilot).
+
+### Project Highlights
+
+- Nx workspace architecture for scalable multi-app and multi-lib development.
+- Use of Angular standalone components for modularity and simplicity.
+- FontAwesome integration for icons.
+- Structured UI with reusable components (UI Card, Status Indicator, etc.).
+
 ## Useful links
 
 Learn more:
 
-- [Learn more about this workspace setup](https://nx.dev/getting-started/tutorials/angular-monorepo-tutorial?utm_source=nx_project&amp;utm_medium=readme&amp;utm_campaign=nx_projects)
+- [Learn more about this workspace setup](https://nx.dev/getting-started/tutorials/angular-monorepo-tutorial?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
 - [Learn about Nx on CI](https://nx.dev/ci/intro/ci-with-nx?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
 - [Releasing Packages with Nx release](https://nx.dev/features/manage-releases?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
 - [What are Nx plugins?](https://nx.dev/concepts/nx-plugins?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
 
 And join the Nx community:
+
 - [Discord](https://go.nx.dev/community)
 - [Follow us on X](https://twitter.com/nxdevtools) or [LinkedIn](https://www.linkedin.com/company/nrwl)
 - [Our Youtube channel](https://www.youtube.com/@nxdevtools)
